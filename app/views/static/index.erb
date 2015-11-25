@@ -1,2 +1,34 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<!-- <center>
+<h1>Login Page</h1>
+<p>My first webpage</p>
+<table>
+<form action="#" method="">
+	<tr>
+	<td>Username:</td>
+	<td><input type = "text" name="username"></td>
+	</tr>
+	<tr>
+	<td>Password:</td>
+	<td><input type = "password" name="password"></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td><input type="submit" value="Login"></td>
+	<tr>
+	<td></td>
+	<td><a href ="https://www.google.co.uk/">Forget your password?</a></td>
+	</tr>
+</form>
+</center> -->
+
+<h1>Welcome to url shortener</h1>
+<form action="/urls" method="post">
+	Enter URL:
+	<input type="text" name="long_url">
+	<input type="submit" value="Submit">
+</form>
+
+<% @urls.each do |url| %>
+	<%= url.long_url %> - <a href =<%= url.short_url %>><%= url.short_url %></a><br>
+<% end %>
+
