@@ -1,27 +1,4 @@
-<!-- <center>
-<h1>Login Page</h1>
-<p>My first webpage</p>
-<table>
-<form action="#" method="">
-	<tr>
-	<td>Username:</td>
-	<td><input type = "text" name="username"></td>
-	</tr>
-	<tr>
-	<td>Password:</td>
-	<td><input type = "password" name="password"></td>
-	</tr>
-	<tr>
-	<td></td>
-	<td><input type="submit" value="Login"></td>
-	<tr>
-	<td></td>
-	<td><a href ="https://www.google.co.uk/">Forget your password?</a></td>
-	</tr>
-</form>
-</center> -->
-
-<h1>Welcome to url shortener</h1>
+<!-- <h1>Welcome to url shortener</h1>
 <form action="/urls" method="post">
 	Enter URL:
 	<input type="text" name="long_url">
@@ -32,3 +9,155 @@
 	<%= url.long_url %> - <a href =<%= url.short_url %>><%= url.short_url %></a><br>
 <% end %>
 
+
+ -->
+<head>
+<title>URL Shortener</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href="/css/application.css" rel="stylesheet" type="text/css" />
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+<link rel="icon" 
+      type="image/png" 
+      href="../img/favicon1.ico">
+</head>
+
+<body>
+<div class="header-wrapper">
+	<div class="header">
+		<div class="logo">
+			<img src="/img/banner.png" width="250px" height="100px">
+		</div>
+		<!--logo ends here -->
+		<div class="menu">
+			<ul>
+				<li><a class="active" href="#">Home</a>me</li>
+        		<li><a href="#">About Us</a></li>
+        		<li><a href="#">Services</a></li>
+        		<li><a href="#">Contact</a></li>
+        	</ul>
+		</div>
+		<!--Menu ends here -->
+	</div>
+	<!--Header ends here -->
+</div>
+<hr>
+<!-- Header-wrappers end here -->
+<!--  <div class="clear"></div>
+<div class="banner-wrapper">
+  <div class="banner">
+    <div class="banner-image"> <img src="img/banner.png" width="940px" height="330px" alt="img" /> 
+    </div> -->
+    <!---banner-image ends here
+  </div>
+  <!bannerends here-->
+<!-- </div> -->
+<!---banner-wrapper ends here-->
+<div class="container">
+  <h2>Enter your long url here</h2>
+  <form action="/urls" method="post">
+    <div class="form-group">
+     <!--  <label for="long_url">Your Url:</label> -->
+      <input type="text" class="form-control" name="long_url" placeholder="Enter The Long Url">
+    </div>
+    <input type="submit" class="btn btn-default" value="Submit">
+  </form>
+</div>
+
+<div class="clear"></div>
+<div class="conainer">
+  <div class="content-1 marginRight" >
+    <h1>Step 1</h1>
+    <p>Pick one of your url that needed to be shorten and copy the url</p>
+  </div>
+  <div class="content-1 marginRight">
+    <h1>Step 2</h1>
+    <p>Paste the url at the "Enter your long url" textbox and click submit</p>
+  </div>
+  <div class="content-1">
+    <h1>Step 3</h1>
+    <p>Finally. you will be redirect to the same page and your short url will display below of the page at the "Your short url"</p>
+  </div>
+  <!---content-1 ends here-->
+</div>
+
+<!-- <div class="clear"></div>
+<div class="conainer">
+  <div class="content-1 marginRight" >
+    <h1>Your Step</h1>
+    <div class="content-1-image"><h2>Step 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Step 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Step 3</h2><span></span></div> -->
+<!-- <form action="/urls" method="post">
+	Enter URL:
+	<input type="text" name="long_url">
+	<input type="submit" value="Submit">
+</form> -->
+
+<div class="clear"></div>
+<div class="conainer1">
+  <div class="content-1 marginRight" >
+    <h1>Your short URL</h1>
+    <div class="content-11-image"> <% @urls.each do |url| %>
+	<%= url.long_url %> - <a href =<%= url.short_url %>>localhost:9393/<%= url.short_url %></a><br>
+<% end %></div>
+    <!---content-1-image ends here-->
+<!--     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p> -->
+  </div>
+  <!---content-1 ends here-->
+</div>
+<!---container ends here-->
+</body>
+<div class="clear"></div>
+
+<footer>
+<div class="footer1">
+	<div class="foot">
+		<table>
+		<tr>
+			<td>
+				<h3>URL SHORTENER</h3>
+			</td>
+			<td>
+				<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEWSLETTER</h3>
+			</td>
+			<td>
+				<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GET SOCIAL</h3>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Since 2008, we have been committed to unleashing the power of the link.</p> <p>Based in Kuala Lumpur, we shorten nearly half a billion links per month.</p>
+			</td>
+			<td>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign up today for free and be the first to get notified on our new updates,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; discounts and special Offers.</p>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" size="18" value="" placeholder="Your e-mail">
+			</td>
+			<td>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/fb.jpg" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/twitter.png" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/insta.png" width="30px" height="30px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/youtube.png" width="30px" height="30px">
+			</td>
+
+		</tr>
+		</table>
+	</div>
+
+</div>
+
+<div class="footer2">
+	<div class="foot2">
+		<p>© 2015 URL Shortener. All Rights Reserved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAQ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Privacy Policies</p>
+	</div>
+</div>
+	
+</footer>
+
+
+
+<!-- 		<td><img src="../img/fb.jpg" width="30px" height="30px"></td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><img src="../img/twitter.png" width="30px" height="30px"></td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><img src="../img/insta.png" width="30px" height="30px"></td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><img src="../img/youtube.png" width="30px" height="30px"></td> -->
